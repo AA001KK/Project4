@@ -1,8 +1,0 @@
-(function (d, s, id) {
-  if (d.getElementById(id)) return;
-  const t = d.getElementsByTagName(s)[0];
-  const vis = d.createElement(s);
-  vis.id = id;
-  vis.src = 'https://media.vidjet.io/client-app.js?siteId=c2ea4ee9-af30-4f5c-abce-79b70fcaf1a2';
-  t.parentNode.insertBefore(vis, t);
-})(document, 'script', 'vidjet');
