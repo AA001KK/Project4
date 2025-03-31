@@ -29,11 +29,6 @@ h6 {
     font-size: 12px;
 }
 
-p {
-    font-size: 16px;
-    color: #465b52;
-    margin: 15px 0 20px 0;
-}
 
 .section-p1 {
     padding: 40px 80px;
@@ -49,35 +44,24 @@ body {
   .top-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: rgb(28 40 75);
-    height: 40px;
     overflow: hidden;
-    position: relative;
+    color: white;
   }
   
   .carousel {
     display: flex;
+    animation: scrollText 10s linear infinite;
     white-space: nowrap;
-    transition: transform 0.5s ease;
   }
-  
-  .carousel p {
-    margin: 0;
-    padding: 0 50px;
-    font-size: 14px;
-  }
-  
-  .arrow {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .arrow:hover {
-    color: #00b4d8;
+
+@keyframes scrollText {
+    from { 
+      transform: translateX(100%); 
+    }
+    to { 
+      transform: translateX(-100%); 
+    }
   }
   
   .navbar {
