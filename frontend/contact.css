@@ -6,7 +6,7 @@ ul {
 }
 .sec-title {
   position: relative;
-  padding-bottom: 40px;
+  padding: 40px;
 }
 .sec-title .title {
   position: relative;
@@ -125,9 +125,9 @@ ul {
   margin-top: 10px;
   text-transform: capitalize;
   padding: 16px 39px;
-  border: 2px solid #00b8ca;
+  border: 2px solid rgb(28 40 75);
   font-family: Arimo, sans-serif;
-  background: #00b8ca;
+  background: rgb(28 40 75);
   display: inline-block;
   position: relative;
   line-height: 24px;
@@ -135,8 +135,8 @@ ul {
   color: #fff;
 }
 .contact-form .theme-btn:hover {
-  color: #00b8ca;
-  border-color: #00b8ca;
+  color: rgb(28 40 75);
+  border-color: rgb(28 40 75);
   background: 0 0;
 }
 .contact-form input.error,
