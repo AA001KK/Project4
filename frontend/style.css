@@ -303,3 +303,42 @@ swiper-slide img {
     font-size: 16px;
   }
 }
+
+
+
+/* category */
+
+.category-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.3s;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+}
+
+.category-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.category-card h3 {
+  padding: 15px 0;
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
