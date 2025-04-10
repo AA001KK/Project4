@@ -50,6 +50,8 @@ body {
   align-items: center;
   padding: 0.5rem;
   position: relative;
+  background-color: rgb(28 40 75);
+  color: var(--white);
 }
 
 .announcement-bar button {
@@ -406,13 +408,14 @@ body {
   height: 100%;
 }
 
-.swiper-slide {
+.mySwiper .swiper-wrapper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
 
 .swiper-slide img {
@@ -428,15 +431,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 60px;
 }
 
-.swiper-btn {
+ .mySwiper .swiper-pagination {
+  width: 100%;
+  height: 2.5%;
+  text-align: center;
+} 
+
+.mySwiper .swiper-btn {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.mySwiper .swiper-btn:hover {
+  transform: scale(1.2);
+}
+
+.mySwiper .swiper-btn {
   position: static;
   height: 22px;
   margin: 0;
 }
-.swiper-btn:after {
+.mySwiper .swiper-btn:after {
     font-size: 22px;
     color: #fff;
 }

@@ -1,4 +1,3 @@
-
   let gallerySlider = new Swiper('.gallery-slider', {
     pagination: {
        el: '.swiper-pagination',
