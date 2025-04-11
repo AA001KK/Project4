@@ -1,3 +1,28 @@
+const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+addToCartButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const product = {
+      id: btn.getAttribute('data-id'),
+      name: btn.parentElement.querySelector('.product-name').textContent,
+      price: btn.parentElement.querySelector('.product-price').textContent,
+      image: btn.parentElement.querySelector('img').getAttribute('src')
+    };
+
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Cart count update
+    document.getElementById('cart-count').textContent = cart.length;
+    alert("Savatga qo‘shildi!");
+  });
+});
+
+// Show current cart count
+document.getElementById('cart-count').textContent = cart.length;
+
+
 
 $(document).ready(function() {
         let slider = $("#slider");

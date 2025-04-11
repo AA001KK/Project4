@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chango&family=Roboto&display=swap");
 
-
 img {
   width: 100%;
   height: auto;
@@ -60,15 +59,15 @@ img {
   box-shadow: 0 0 5px #0003;
   border-radius: 20px;
   padding: 10px 15px;
-  color: #478298;
+  color: #00bbff;
 }
 
 .btn-quantity.plus:hover {
-  color: #006400; /* darken(green, 10%) approx */
+  color: #006400;
 }
 
 .btn-quantity.minus:hover {
-  color: #8b0000; /* darken(red, 10%) approx */
+  color: #8b0000;
 }
 
 .btn-remove {
@@ -83,7 +82,7 @@ img {
 }
 
 .btn-remove:hover {
-  color: #1a1b1f; /* darken(#1d1e22, 10%) approx */
+  color: #1a1b1f;
 }
 
 .btn-remove .icon {
@@ -107,7 +106,7 @@ img {
 }
 
 .btn-checkout:hover {
-  background: #27b36f; /* darken(#2ecc71, 10%) approx */
+  background: #27b36f;
 }
 
 .items {
@@ -117,7 +116,7 @@ img {
 }
 
 .item {
-  /* background: #fff; */
+  background: rgb(37, 53, 100);
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -191,7 +190,8 @@ img {
 
 .summary {
   padding: 20px;
-  background: #fff;
+  background: rgb(37, 53, 100);
+  color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   margin-bottom: 80px;
@@ -209,10 +209,9 @@ img {
 }
 
 .container {
-  max-width: 1140px;
   margin: 0 auto;
   padding: 0 50px;
-  margin-top: 200px;
+  margin-top: 50px;
 }
 
 .picker {
@@ -255,28 +254,13 @@ img {
   width: 49%;
   border-radius: 10px;
   box-shadow: 0 0 5px #00000030;
-  background-color: #fff;
+  background-color: rgb(37, 53, 100);
   padding: 0px 30px 30px 30px;
   margin-bottom: 20px;
+  color: #fff; 
 }
 
 h3 {
-  font-family: "Amatic SC", cursive;
-  font-size: 2em;
-}
-
-.coupon {
-  display: flex;
-  border-radius: 10px;
-  box-shadow: 0 0 5px #00000030;
-  background-color: #fff;
-  padding: 5px 30px;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.coupon h3 {
-  margin-right: 30px;
   font-family: "Amatic SC", cursive;
   font-size: 2em;
 }
@@ -285,10 +269,6 @@ input {
   border-radius: 10px;
   height: 40px;
 }
-
-
-
-
 
 .summary-content {
   display: flex;
@@ -357,12 +337,6 @@ input {
     font-size: 4em;
   }
 
-  .header {
-    margin-bottom: 50px;
-    height: 80px;
-    margin-top: -120px;
-  }
-
   .item .details p {
     font-size: 1em;
     text-align: center;
@@ -402,14 +376,6 @@ input {
     margin-top: 60px;
   }
 
-  .coupon {
-    flex-direction: column;
-    padding: 30px 0px;
-  }
-
-  .coupon h3 {
-    margin: 0;
-  }
 
   .btn-checkout {
     font-size: 1.6em;
