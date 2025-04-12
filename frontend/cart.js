@@ -1,21 +1,3 @@
-const cartItemsDiv = document.getElementById('cart-items');
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-if (cart.length === 0) {
-  cartItemsDiv.innerHTML = "<p>Savat bo‘sh!</p>";
-} else {
-  cart.forEach(item => {
-    const productDiv = document.createElement('div');
-    productDiv.innerHTML = `
-      <img src="${item.image}" width="100">
-      <h4>${item.name}</h4>
-      <p>Narxi: $${item.price}</p>
-      <hr>
-    `;
-    cartItemsDiv.appendChild(productDiv);
-  });
-}
-
 
 $(document).ready(function () {
   let $addQuantity = $(".btn-quantity.plus"),
@@ -75,3 +57,38 @@ $(document).ready(function () {
 
   calculateTotal();
 });
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartContainer = document.getElementById("cart-items");
+
+    if (cart.length === 0) {
+      cartContainer.innerHTML = "<p>Savatcha bo‘sh</p>";
+      return;
+    }
+
+    let total = 0;
+    cart.forEach((item) => {
+      const itemTotal = parseFloat(item.price.replace("$", "")) * item.quantity;
+      total += itemTotal;
+
+      const productHTML = `
+        <div class="cart-item">
+          <img src="${item.image}" width="80">
+          <div>
+            <h5>${item.name}</h5>
+            <p>Size: ${item.size}, Color: ${item.color}</p>
+            <p>Narx: ${item.price} x ${item.quantity} = $${itemTotal.toFixed(2)}</p>
+          </div>
+        </div>
+        <hr>
+      `;
+      cartContainer.innerHTML += productHTML;
+    });
+
+    document.getElementById("total-price").innerText = "$" + total.toFixed(2);
+  });

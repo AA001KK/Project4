@@ -1,29 +1,3 @@
-const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-addToCartButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const product = {
-      id: btn.getAttribute('data-id'),
-      name: btn.parentElement.querySelector('.product-name').textContent,
-      price: btn.parentElement.querySelector('.product-price').textContent,
-      image: btn.parentElement.querySelector('img').getAttribute('src')
-    };
-
-    cart.push(product);
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Cart count update
-    document.getElementById('cart-count').textContent = cart.length;
-    alert("Savatga qo‘shildi!");
-  });
-});
-
-// Show current cart count
-document.getElementById('cart-count').textContent = cart.length;
-
-
-
 $(document).ready(function() {
         let slider = $("#slider");
         let thumb = $("#thumb");
@@ -105,3 +79,37 @@ $(document).ready(function() {
                 }
             });
     });
+  document.getElementById("add-to-cart").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // Mahsulot ma'lumotlari
+    const product = {
+      id: 1,
+      name: document.querySelector(".product-name").innerText,
+      price: document.querySelector(".product-price-discount span").innerText,
+      quantity: document.querySelector(".qty").value,
+      size: document.getElementById("size").value,
+      color: document.getElementById("color").value,
+      image: document.querySelector("#slider .item img").src,
+    };
+
+    // Mahsulotlar ro'yxatini olish (avvalgi mavjud bo'lsa)
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Tekshirish: shu mahsulot avval qo‘shilganmi
+    const existingProduct = cart.find((item) => item.id === product.id);
+
+    if (existingProduct) {
+      existingProduct.quantity = parseInt(existingProduct.quantity) + parseInt(product.quantity);
+    } else {
+      cart.push(product);
+    }
+
+    // Yangi ro'yxatni saqlash
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Savatcha hisoblagichini yangilash
+    document.getElementById("cart-count").innerText = cart.length;
+
+    alert("Mahsulot savatchaga qo‘shildi!");
+  });
