@@ -59,31 +59,30 @@
 
 
     function editUser(button) {
-      const row = button.closest('tr');
-      const nameCell = row.querySelector('.author-name');
-      const emailCell = row.querySelector('.author-email');
-      const phoneCell = row.querySelector('.phone');
-      const lastLoginCell = row.querySelector('.last-login');
-  
-      // Toggle edit mode
-      if (button.textContent.trim() === "Edit") {
-          // Enable inputs for editing
-          phoneCell.removeAttribute('disabled');
-          lastLoginCell.removeAttribute('disabled');
-          button.textContent = "Save";
-      } else {
-          // Save the edited data (just log it here, you can send it to your server)
-          console.log('Updated data:', {
-              name: nameCell.textContent,
-              email: emailCell.textContent,
-              phone: phoneCell.value,
-              lastLogin: lastLoginCell.value,
-          });
-  
-          // Disable inputs and change button back to "Edit"
-          phoneCell.setAttribute('disabled', true);
-          lastLoginCell.setAttribute('disabled', true);
-          button.textContent = "Edit";
-      }
-  }
-  
+    const row = button.closest('tr');
+    const nameCell = row.querySelector('.author-name');
+    const emailCell = row.querySelector('.author-email');
+    const phoneCell = row.querySelector('.phone');
+    const lastLoginCell = row.querySelector('.last-login');
+
+    // Toggle edit mode
+    if (button.textContent.trim() === "Edit") {
+        // Enable inputs for editing
+        phoneCell.removeAttribute('disabled');
+        lastLoginCell.removeAttribute('disabled');
+        button.textContent = "Save";
+    } else {
+        // Save the edited data (just log it here, you can send it to your server)
+        console.log('Updated data:', {
+            name: nameCell.textContent,
+            email: emailCell.textContent,
+            phone: phoneCell.value,
+            lastLogin: lastLoginCell.value,
+        });
+
+        // Disable inputs and change button back to "Edit"
+        phoneCell.setAttribute('disabled', true);
+        lastLoginCell.setAttribute('disabled', true);
+        button.textContent = "Edit";
+    }
+}
