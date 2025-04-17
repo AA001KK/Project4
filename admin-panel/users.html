@@ -28,7 +28,7 @@
     
             
               <div class="container">
-                  <h1>Authors jadvali</h1>
+                  <h1> Users</h1>
                   
                   <div class="search-bar">
                       <div class="search-input">
@@ -41,38 +41,31 @@
                       <thead>
                           <tr>
                               <th style="width: 60px; accent-color: #5e72e4; cursor: pointer"><input type="checkbox" id="selectAll"></th>
-                              <th>AUTHOR</th>
-                              <th>FUNCTION</th>
-                              <th>STATUS</th>
-                              <th>EMPLOYED</th>
+                              <th>Name</th>
+                              <th>Email</th>
+                              <th>Phone</th>
+                              <th>Orders</th>
+                              <th>Last Login</th>
                               <th>ACTION</th>
                           </tr>
                       </thead>
                       <tbody>
-                          <tr>
-                              <td><input type="checkbox" class="checkbox"></td>
-                              <td>
-                                  <div class="author-info">
-                                      <div class="avatar">JM</div>
-                                      <div>
-                                          <div class="author-name">John Michael</div>
-                                          <div class="author-email">john@creative-tim.com</div>
-                                      </div>
-                                  </div>
-                              </td>
-                              <td>
-                                  <div class="function-info">Manager</div>
-                                  <div class="function-detail">Organization</div>
-                              </td>
-                              <td><span class="status status-online">ONLINE</span></td>
-                              <td>23/04/18</td>
-                              <td>
-                                  <div class="action-buttons">
-                                      <button class="btn btn-edit"><i class="fas fa-edit"></i> Edit</button>
-                                      <button class="btn btn-delete"><i class="fas fa-trash"></i></button>
-                                  </div>
-                              </td>
-                          </tr>
+                        <tr>
+                            <div class="item">
+                            <td><input type="checkbox" class="checkbox"></td>
+                            <td><div class="author-name">John Michael</div></td>
+                            <td><div class="author-email">john@creative-tim.com</div></td>
+                            <td><input type="text" class="phone" value="+998999999999" disabled></td>
+                            <td><span class="status status-online">2</span></td>
+                            <td><input type="text" class="last-login" value="23/04/18" disabled></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-edit" onclick="editUser(this)"><i class="fas fa-edit"></i> Edit</button>
+                                    <button class="btn btn-delete" onclick="confirmDelete(this)"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </td>
+                        </div>
+                        </tr>
                           <tr>
                               <td><input type="checkbox" class="checkbox"></td>
                               <td>
@@ -80,15 +73,14 @@
                                       <div class="avatar">AL</div>
                                       <div>
                                           <div class="author-name">Alexa Liras</div>
-                                          <div class="author-email">alexa@creative-tim.com</div>
                                       </div>
                                   </div>
                               </td>
                               <td>
-                                  <div class="function-info">Programator</div>
-                                  <div class="function-detail">Developer</div>
+                                <div class="author-email">alexa@creative-tim.com</div>
                               </td>
-                              <td><span class="status status-optime">OPTIME</span></td>
+                              <td>+998999999999</td>
+                              <td><span class="status status-online">26</span></td>
                               <td>11/01/19</td>
                               <td>
                                   <div class="action-buttons">
@@ -104,15 +96,14 @@
                                       <div class="avatar">LP</div>
                                       <div>
                                           <div class="author-name">Laurent Perrier</div>
-                                          <div class="author-email">laurent@creative-tim.com</div>
                                       </div>
                                   </div>
                               </td>
                               <td>
-                                  <div class="function-info">Executive</div>
-                                  <div class="function-detail">Projects</div>
+                                <div class="author-email">laurent@creative-tim.com</div>
                               </td>
-                              <td><span class="status status-online">ONLINE</span></td>
+                              <td>+998999999999</td>
+                              <td><span class="status status-online">5</span></td>
                               <td>19/09/17</td>
                               <td>
                                   <div class="action-buttons">
@@ -128,15 +119,14 @@
                                       <div class="avatar">ML</div>
                                       <div>
                                           <div class="author-name">Michael Levi</div>
-                                          <div class="author-email">michael@creative-tim.com</div>
                                       </div>
                                   </div>
                               </td>
                               <td>
-                                  <div class="function-info">Programator</div>
-                                  <div class="function-detail">Developer</div>
+                                <div class="author-email">michael@creative-tim.com</div>
                               </td>
-                              <td><span class="status status-online">ONLINE</span></td>
+                              <td>+998999999999</td>
+                              <td><span class="status status-online">7</span></td>
                               <td>24/12/08</td>
                               <td>
                                   <div class="action-buttons">
@@ -152,15 +142,14 @@
                                       <div class="avatar">RG</div>
                                       <div>
                                           <div class="author-name">Richard Gran</div>
-                                          <div class="author-email">richard@creative-tim.com</div>
                                       </div>
                                   </div>
                               </td>
                               <td>
-                                  <div class="function-info">Manager</div>
-                                  <div class="function-detail">Executive</div>
+                                <div class="author-email">richard@creative-tim.com</div>
                               </td>
-                              <td><span class="status status-optime">OPTIME</span></td>
+                              <td>+998999999999</td>
+                              <td><span class="status status-optime">8</span></td>
                               <td>04/10/21</td>
                               <td>
                                   <div class="action-buttons">
@@ -176,15 +165,14 @@
                                       <div class="avatar">ME</div>
                                       <div>
                                           <div class="author-name">Miriam Eric</div>
-                                          <div class="author-email">miriam@creative-tim.com</div>
                                       </div>
                                   </div>
                               </td>
                               <td>
-                                  <div class="function-info">Programtor</div>
-                                  <div class="function-detail">Developer</div>
+                                <div class="author-email">miriam@creative-tim.com</div>
                               </td>
-                              <td><span class="status status-optime">OPTIME</span></td>
+                              <td>+998999999999</td>
+                              <td><span class="status status-optime">2</span></td>
                               <td>14/09/20</td>
                               <td>
                                   <div class="action-buttons">
