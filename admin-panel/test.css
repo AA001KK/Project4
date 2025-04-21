@@ -236,7 +236,7 @@ body {
   font-size: 1.5rem;
   padding-left: 15px;
   background: var(--page-content-blockColor);
-  color: var(--white);
+  /* color: var(--white); */
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
