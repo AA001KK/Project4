@@ -56,33 +56,49 @@
     });
 
 
-
-
-//     function editUser(button) {
-//     const row = button.closest('tr');
-//     const nameCell = row.querySelector('.author-name');
-//     const emailCell = row.querySelector('.author-email');
-//     const phoneCell = row.querySelector('.phone');
-//     const lastLoginCell = row.querySelector('.last-login');
-
-//     // Toggle edit mode
-//     if (button.textContent.trim() === "Edit") {
-//         // Enable inputs for editing
-//         phoneCell.removeAttribute('disabled');
-//         lastLoginCell.removeAttribute('disabled');
-//         button.textContent = "Save";
-//     } else {
-//         // Save the edited data (just log it here, you can send it to your server)
-//         console.log('Updated data:', {
-//             name: nameCell.textContent,
-//             email: emailCell.textContent,
-//             phone: phoneCell.value,
-//             lastLogin: lastLoginCell.value,
-//         });
-
-//         // Disable inputs and change button back to "Edit"
-//         phoneCell.setAttribute('disabled', true);
-//         lastLoginCell.setAttribute('disabled', true);
-//         button.textContent = "Edit";
-//     }
-// }
+    const modalOverlay = document.getElementById("modalOverlay");
+    const closeBtn = document.getElementById("closeBtn");
+    const saveBtn = document.getElementById("saveBtn");
+  
+    const inputName = document.getElementById("inputName");
+    const inputEmail = document.getElementById("inputEmail");
+    const inputPhone = document.getElementById("inputPhone");
+    const inputOrders = document.getElementById("inputOrders");
+    const inputLogin = document.getElementById("inputLogin");
+  
+    // Edit button click handler
+    function editUser(button) {
+      const row = button.closest("tr");
+      const name = row.querySelector(".author-name").textContent.trim();
+      const email = row.querySelector(".author-email").textContent.trim();
+      const phone = row.querySelector(".phone") ? row.querySelector(".phone").value : row.cells[3].textContent.trim();
+      const role = row.querySelector(".status").textContent.trim();
+      const login = row.querySelector(".last-login") ? row.querySelector(".last-login").value : row.cells[5].textContent.trim();
+  
+      inputName.value = name;
+      inputEmail.value = email;
+      inputPhone.value = phone;
+      inputOrders.value = role;
+      inputLogin.value = login;
+  
+      modalOverlay.style.display = "block";
+    }
+  
+    // Close modal
+    closeBtn.onclick = () => {
+      modalOverlay.style.display = "none";
+    };
+  
+    // Save changes (You can replace this with real saving logic)
+    saveBtn.onclick = () => {
+      alert("Ma'lumotlar saqlandi (yoki serverga jo‘natiladi)");
+      modalOverlay.style.display = "none";
+    };
+  
+    // Optional: Close modal on outside click
+    window.onclick = (e) => {
+      if (e.target == modalOverlay) {
+        modalOverlay.style.display = "none";
+      }
+    };
+  

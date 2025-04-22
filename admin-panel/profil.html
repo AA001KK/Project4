@@ -196,43 +196,46 @@
           </div>
         </section>
 
-
-        <main class="profile-section">
-            <div class="profile-header">
-              <h2>Personal Information</h2>
-            </div>
-            <div class="profile-body">
-              <div class="profile-photo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvYeB0EM3qeVoO_ZFHDqz7Q1UsRMPtLWpuHg&s" alt="User Photo">
-              </div>
-              <form id="profileForm">
-                <label for="name">Name</label>
+        <div class="container">
+          <h1>Personal Information</h1>
+          <div class="profile-box">
+            <div class="profile-image-wrapper">
+              <label for="profileImageInput">
+                <img id="profileImage" src="https://cdn-icons-png.flaticon.com/512/7915/7915522.png" alt="Profile Image" />
+              </label>
+              <input type="file" id="profileImageInput" accept="image/*" hidden />
+            </div>      
+            <div class="profile-right">
+              <form id="profile-form">
+                <label>Name:</label>
                 <input type="text" id="name" value="Kazi Mahbub" disabled>
-      
-                <label for="dob">Date Of Birth</label>
-                <input type="date" id="dob" value="2022-01-20" disabled>
-      
-                <label>Gender</label>
-                <div class="gender">
-                  <label><input type="radio" name="gender" checked disabled> Male</label>
-                  <label><input type="radio" name="gender" disabled> Female</label>
-                </div>
-      
-                <label for="phone">Phone Number</label>
-                <div class="phone-input">
-                  <span>🇹🇷</span>
-                  <input type="text" id="phone" value="+90-123456789" disabled>
-                </div>
-      
-                <label for="email">Email</label>
+        
+                <label>Date Of Birth:</label>
+                <input type="date" id="dob" value="2012-01-20" disabled>
+        
+                <label>Gender:</label>
+                <select id="gender" disabled>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+        
+                <label>Phone Number:</label>
+                <input type="tel" id="phone" value="+90-123456789" disabled>
+        
+                <label>Email:</label>
                 <input type="email" id="email" value="abcd1234@email.com" disabled>
+        
+                <div class="buttons">
+                  <button type="button" id="editBtn">Edit</button>
+                  <button type="submit" id="saveBtn" disabled>Save</button>
+                  <button type="button" id="cancelBtn" disabled>Cancel</button>
+                </div>
               </form>
             </div>
-            
-            <button onclick="editProfile()">Edit</button>
-            <button onclick="saveProfile()">Save</button>
-            <button onclick="cancelEdit()">Cancel</button>
-          </main>
+          </div>
+        </div>
+
+      </section>        
 
 
           <script src="profil.js"></script>

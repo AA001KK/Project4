@@ -1,9 +1,9 @@
 
-document.getElementById('configBtn').addEventListener('click', () => {
+document.getElementById('configBtn')?.addEventListener('click', () => {
   document.getElementById('configPanel').classList.add('show');
 });
 
-document.getElementById('closeConfig').addEventListener('click', () => {
+document.getElementById('closeConfig')?.addEventListener('click', () => {
   document.getElementById('configPanel').classList.remove('show');
 });
 
@@ -27,14 +27,14 @@ document.querySelectorAll('.typeBtn').forEach(btn => {
   });
 });
 
-document.getElementById('navbarFixed').addEventListener('change', function () {
+document.getElementById('navbarFixed')?.addEventListener('change', function () {
   document.querySelector('.navbar').style.position = this.checked ? 'fixed' : 'relative';
 });
 
-document.getElementById('miniSidenav').addEventListener('change', function () {
+document.getElementById('miniSidenav')?.addEventListener('change', function () {
   document.querySelector('.sidebar').classList.toggle('mini');
 });
 
-document.getElementById('darkMode').addEventListener('change', function () {
+document.getElementById('darkMode')?.addEventListener('change', function () {
   document.body.classList.toggle('dark-mode');
 });
