@@ -139,3 +139,57 @@
     gap: 10px;
   }
   
+   
+  .buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #editBtn {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  #saveBtn {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  #cancelBtn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  .profile-image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .profile-image-wrapper img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .profile-image-wrapper img:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+  }
+  
+    
