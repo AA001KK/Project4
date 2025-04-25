@@ -186,12 +186,15 @@ body {
 
 /* footer */
 .inner-column {
-  background: #1c284b; /* Tungi ko‘k fon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1c284b; 
   padding: 60px 35px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
-  text-align: left;
+  /* text-align: left; */
 }
 
 .inner-column h2 {
@@ -200,7 +203,7 @@ body {
   margin-bottom: 45px;
   text-transform: uppercase;
   line-height: 1.4em;
-  color: white; /* Yorqin ko‘k sarlavha */
+  color: white;
 }
 
 .list-info {

@@ -57,38 +57,78 @@ let swiper = new Swiper(".mySwiper", {
 
 
 // Elon
-const announcements = [
-  "Ozbeni bilgan biladi, bilmagan o'zi biladi!",
-  "Yangi chegirmalar uchun kuzatib boring!",
-  "Biz bilan bog'laning va yangiliklardan xabardor bo'ling!",
-  "OZBE 3 YOSHDA!",
-  "qadamlariga hasanot!",
-  "bizayam drop qvordik"
-];
+// const announcements = [
+//   "Ozbeni bilgan biladi, bilmagan o'zi biladi!",
+//   "Yangi chegirmalar uchun kuzatib boring!",
+//   "Biz bilan bog'laning va yangiliklardan xabardor bo'ling!",
+//   "OZBE 3 YOSHDA!",
+//   "qadamlariga hasanot!",
+//   "bizayam drop qvordik"
+// ];
 
-const announcementText = document.querySelector('.announcement-bar p');
-const announcementPrev = document.querySelector('.announcement-bar .prev');
-const announcementNext = document.querySelector('.announcement-bar .next');
-let announcementIndex = 0;
+// const announcementText = document.querySelector('.announcement-bar p');
+// const announcementPrev = document.querySelector('.announcement-bar .prev');
+// const announcementNext = document.querySelector('.announcement-bar .next');
+// let announcementIndex = 0;
 
-function updateAnnouncement() {
-  announcementText.textContent = announcements[announcementIndex];
-}
+// function updateAnnouncement() {
+//   announcementText.textContent = announcements[announcementIndex];
+// }
 
-announcementPrev.addEventListener('click', () => {
-  announcementIndex = (announcementIndex - 1 + announcements.length) % announcements.length;
-  updateAnnouncement();
+// announcementPrev?.addEventListener('click', () => {
+//   announcementIndex = (announcementIndex - 1 + announcements.length) % announcements.length;
+//   updateAnnouncement();
+// });
+
+// announcementNext?.addEventListener('click', () => {
+//   announcementIndex = (announcementIndex + 1) % announcements.length;
+//   updateAnnouncement();
+// });
+
+// setInterval(() => {
+//   announcementIndex = (announcementIndex + 1) % announcements.length;
+//   updateAnnouncement();
+// }, 1500);
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Your code here
+  const announcements = [
+    "Ozbeni bilgan biladi, bilmagan o'zi biladi!",
+    "Yangi chegirmalar uchun kuzatib boring!",
+    "Biz bilan bog'laning va yangiliklardan xabardor bo'ling!",
+    "OZBE 3 YOSHDA!",
+    "qadamlariga hasanot!",
+    "bizayam drop qvordik"
+  ];
+
+  const announcementText = document.querySelector('.announcement-bar p');
+  const announcementPrev = document.querySelector('.announcement-bar .prev');
+  const announcementNext = document.querySelector('.announcement-bar .next');
+  let announcementIndex = 0;
+
+  function updateAnnouncement() {
+    if (announcementText) {
+      announcementText.textContent = announcements[announcementIndex];
+    } else {
+      console.log("Announcement text element not found!");
+    }
+  }
+
+  announcementPrev?.addEventListener('click', () => {
+    announcementIndex = (announcementIndex - 1 + announcements.length) % announcements.length;
+    updateAnnouncement();
+  });
+
+  announcementNext?.addEventListener('click', () => {
+    announcementIndex = (announcementIndex + 1) % announcements.length;
+    updateAnnouncement();
+  });
+
+  setInterval(() => {
+    announcementIndex = (announcementIndex + 1) % announcements.length;
+    updateAnnouncement();
+  }, 1500);
 });
-
-announcementNext.addEventListener('click', () => {
-  announcementIndex = (announcementIndex + 1) % announcements.length;
-  updateAnnouncement();
-});
-
-setInterval(() => {
-  announcementIndex = (announcementIndex + 1) % announcements.length;
-  updateAnnouncement();
-}, 1500);
-
+// console.log(announcementText); // Check if it logs null or the actual element
 
 
