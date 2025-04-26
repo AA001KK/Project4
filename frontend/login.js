@@ -15,7 +15,7 @@ loginBtn.addEventListener('click', (e) => {
     const passWord = password.value;
 
     if (userName === user[0].username && passWord === user[0].password) {
-        window.location.href = './../user-page/profil.html';
+        window.location.href = '/frontend/user-page/profil.html';
     } else {
         alert('Invalid username or password!');
     }
