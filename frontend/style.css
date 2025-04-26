@@ -109,10 +109,10 @@ body {
 /* pastgi qism  */
 
 .rb-faq-shopify-section {
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-bottom: 20px;
-  margin-bottom: 50px;
+  /* padding-right: 30px; */
+  /* padding-left: 30px; */
+  /* padding-bottom: 20px; */
+  /* margin-bottom: 50px; */
   background-color: #fff;
 }
 
@@ -187,7 +187,7 @@ body {
 .inner-column {
   background: #1c284b; /* Tungi ko‘k fon */
   padding: 60px 35px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
   text-align: left;

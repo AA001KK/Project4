@@ -579,8 +579,9 @@ body {
 
 .cards {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 30px;
+  /* flex-wrap: wrap; */
+  padding: 30px;
 }
 
 .card {
@@ -588,7 +589,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 240px;
+  width: 250px;
   position: relative;
   cursor: pointer;
   transition: transform 0.2s;
