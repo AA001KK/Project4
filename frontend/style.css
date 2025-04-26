@@ -183,18 +183,14 @@ body {
 
 
 
-
 /* footer */
 .inner-column {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #1c284b; 
+  background: #1c284b; /* Tungi ko‘k fon */
   padding: 60px 35px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   color: white;
-  /* text-align: left; */
+  text-align: left;
 }
 
 .inner-column h2 {
@@ -204,20 +200,22 @@ body {
   text-transform: uppercase;
   line-height: 1.4em;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .list-info {
+  display: flex;
   list-style: none;
   padding: 0;
   margin-bottom: 20px;
+  justify-content: space-around;
 }
 
 .list-info li {
   font-size: 18px;
   line-height: 1.8em;
   margin-bottom: 25px;
-  /* display: flex;
-  align-items: center; */
   position: relative;
   color: white;
   padding-left: 45px;
@@ -225,14 +223,13 @@ body {
 
 .list-info li i {
   font-size: 30px;
-  color: white; /* Iko'ni ko‘k rangda qildim */
+  color: white;
   top: 8px;
   left: 0;
   position: absolute;
   margin-right: 15px;
 }
 
-/* Ijtimoiy tarmoq tugmalari */
 .social-icon-four {
   display: flex;
   align-items: center;
